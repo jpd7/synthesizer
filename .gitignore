@@ -1,0 +1,6 @@
+*~
+*.wav
+*.class
+/nbproject/private/
+/build/
+/dist/

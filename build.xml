@@ -1,0 +1,20 @@
+
+<project name="synthesizer" default="compile">
+  <description>
+    100% software synthesizer.
+  </description>
+
+  <target name="clean">
+    <delete dir="build"/>
+    <delete dir="dist"/>
+  </target>
+
+  <target name="compile" depends="clean">
+    <mkdir dir="build"/>
+    <javac srcdir="src" destdir="build" includeantruntime="false"
+	   debug="true">
+      <compilerarg value="-Xlint:all"/>
+      <compilerarg value="-Werror"/>
+    </javac>
+  </target>
+</project>

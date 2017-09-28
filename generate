@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+Base_Dir = File.expand_path(File.dirname(__FILE__))
+Build_Dir = Base_Dir + '/build'
+Source_Dir = Base_Dir + '/src'
+
+system "ant"
+system "java -jar ~/bin/apps/jruby.jar \"#{Source_Dir}\"/ruby/main.rb"
